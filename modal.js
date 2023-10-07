@@ -1,3 +1,5 @@
+// modal.js
+
 // Get references to the button and modal
 var openModalButton = document.getElementById("openModalBtn");
 var closeModalButton = document.getElementById("closeModalBtn");
