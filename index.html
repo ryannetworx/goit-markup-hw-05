@@ -10,11 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="">
 
 </head>
 
-<body>
+<body id="index">
     <header>
     <div class="navigation-bar">
         <div class="centered-logo">
@@ -309,6 +308,15 @@
 
 <script src="script.js"></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = "index";
+        const link = document.querySelector(`a[href="${currentPage}.html"]`);
+        if (link) {
+            link.classList.add("active");
+        }
+    });
+</script>
 
 </body>
 </html>

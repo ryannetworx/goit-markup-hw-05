@@ -12,8 +12,8 @@
     
     </head>
 
-<body>
-    <header>
+    <body id="portfolio">
+        <header>
         <div class="navigation-bar">
             <div class="centered-logo">
                 <h2><span class="logo"><span class="web">WEB</span><span class="studio">STUDIO</span></span></h2>
@@ -22,9 +22,9 @@
             <div class="header-body-medium">
                 <nav class="body-medium">
                     <ul>
-                        <li><a href="index.html"><span class="header-nav-studio studio-link" alt="Studio Page">Studio</span></a></li>
-                        <li><a href="portfolio.html"><span class="header-nav-portfolio portfolio" alt="Portfolio Page">Portfolio</span></a></li>
-                        <li><a href="#"><span class="header-nav-contacts contacts">Contacts</span></a></li>
+                        <li><a href="index.html" class="header-nav-studio studio-link"><span>Studio</span></a></li>
+                        <li><a href="portfolio.html" class="header-nav-portfolio portfolio"><span>Portfolio</span></a></li>
+                        <li><a href="#" class="header-nav-contacts contacts"><span>Contacts</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,7 +36,7 @@
                 </ul>
             </div>
         </div>
-    
+        
     </header>
     <div class="filter-btn">
         <button id="allButton" class="filter-button active">All</button>
@@ -190,6 +190,18 @@
             </div>
         </div>
         </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = "portfolio";
+            const link = document.querySelector(`a[href="${currentPage}.html"]`);
+            if (link) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+        
+
 </body>
 
 </html>
