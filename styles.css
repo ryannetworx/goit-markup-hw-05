@@ -973,6 +973,44 @@ footer {
     /* background: linear-gradient(0deg, #E7E9FC, #E7E9FC), linear-gradient(0deg, #FFFFFF, #FFFFFF); */
     /* border: 1px solid #E7E9FC; */
     /* margin-bottom: 40px; Add margin between card-containers */
+    position: relative;
+    overflow: hidden; /* Ensure that box-shadow doesn't overflow */
+}
+
+.card-container::before {
+    content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
+    position: absolute;
+    top: 100%; /* Start from the bottom */
+    left: 0;
+    width: 100%;
+    height: 67%;
+    background-color: #4D5AE5;
+    display: flex;
+    justify-content: flex-start; /* Align text from the left */
+    align-items: flex-start; /* Align text from the top */
+    padding: 10px 8px; /* Adjust padding for positioning */
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), top 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Add transition for top property */
+    pointer-events: none; /* Prevents hover effect from interfering with underlying elements */
+    box-shadow: 0px 2px 1px 0px #2E2F4214; /* Initial box-shadow */
+}
+
+/* Target only the .card-container inside .portfolio-cards */
+.portfolio-cards .card-container:hover::before,
+.portfolio-cards .card-container:focus::before { /* Add focus effect for accessibility */
+    opacity: 1;
+    top: 0; /* Move to the top on hover */
+    box-shadow: 
+      0px 1px 1px px #2E2F4229, /* Box-shadow on hover */
+      0px 1px 6px 0px #2E2F4214; /* Box-shadow on hover */
 }
 
 /* Styling for individual project cards */
@@ -1006,9 +1044,9 @@ footer {
 .project-card-9:hover  {
     border: 1px solid #F4F4FD; /* Change the border on hover */
     box-shadow: 
-        0px 2px 1px 0px #2E2F4214, /* Initial box-shadow */
-        0px 1px 1px 0px #2E2F4229, /* Box-shadow on hover */
-        0px 1px 6px 0px #2E2F4214; /* Box-shadow on hover */
+        0px 2px 2px 0px #2E2F4214, /* Initial box-shadow */
+        0px 2px 2px 1px #2E2F4229, /* Box-shadow on hover */
+        0px 2px 8px 1px #2E2F4214; /* Box-shadow on hover */
 }
 
 /* Styling for the project card information */
@@ -1046,45 +1084,4 @@ footer {
         width: 100%; /* Cards take full width on smaller screens */
         margin-right: 0; /* Remove margin to stack cards vertically */
     }
-}
-
-/* CSS for the hover effect */
-.card-container {
-    position: relative;
-    overflow: hidden; /* Ensure that box-shadow doesn't overflow */
-}
-
-.card-container::before {
-    content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
-    position: absolute;
-    top: 100%; /* Start from the bottom */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #4D5AE5;
-    display: flex;
-    justify-content: flex-start; /* Align text from the left */
-    align-items: flex-start; /* Align text from the top */
-    padding: 10px 8px; /* Adjust padding for positioning */
-    text-align: left;
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #F4F4FD;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), top 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Add transition for top property */
-    pointer-events: none; /* Prevents hover effect from interfering with underlying elements */
-    box-shadow: 0px 2px 1px 0px #2E2F4214; /* Initial box-shadow */
-}
-
-.card-container:hover::before,
-.card-container:focus::before { /* Add focus effect for accessibility */
-    opacity: 1;
-    top: 0; /* Move to the top on hover */
-    box-shadow: 
-      0px 1px 1px 0px #2E2F4229, /* Box-shadow on hover */
-      0px 1px 6px 0px #2E2F4214; /* Box-shadow on hover */
 }
