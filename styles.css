@@ -1032,4 +1032,35 @@ footer {
     }
 }
 
+/* CSS for the hover effect */
+.card-container {
+    position: relative;
+}
+
+.card-container::before {
+    content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 301px;
+    background-color: #4D5AE5;
+    display: flex;
+    justify-content: center;
+    align-items: justify;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-container:hover::before {
+    opacity: 1;
+}
 
