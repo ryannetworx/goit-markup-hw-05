@@ -165,16 +165,20 @@ h3 {
 .header-nav-portfolio.active,
 .header-nav-contacts.active {
     color: #404BBF;
-    text-decoration: underline #404BBF;
-    text-underline-offset: 30px; /* 30px below the text */
+    position: relative;
 }
 
-/* Style for the links that are not active */
-.header-nav-studio,
-.header-nav-portfolio,
-.header-nav-contacts {
-    color: inherit; /* Use the default color for non-active links */
-    text-decoration: none; /* Remove underline for non-active links */
+.header-nav-studio.active::after,
+.header-nav-portfolio.active::after,
+.header-nav-contacts.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px; /* Adjust the thickness of the underline */
+    background-color: #404BBF;
+    position: absolute;
+    bottom: -29px; /* Adjust the offset position, e.g., 10px below the text */
+    left: 0;
 }
 
 

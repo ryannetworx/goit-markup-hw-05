@@ -32,19 +32,6 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the current page's body ID
-    const currentPage = document.body.id;
-
-    // Find the corresponding link by href attribute
-    const link = document.querySelector(`a[href="${currentPage}.html"]`);
-
-    // Add the "active" class to the corresponding link
-    if (link) {
-        link.classList.add("active");
-    }
-});
-
 
 
 
