@@ -245,6 +245,30 @@ h3 {
     }
 }
 
+/* Style for the modal container */
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Position it fixed to overlay the page */
+    width: 408px;
+    height: 584px;
+    top: 80px;
+    left: 516px;
+    border-radius: 4px;
+    background: #FCFCFC;
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 3px 0px #0000001F, 0px 1px 1px 0px #00000024;
+    z-index: 1; /* Ensure it appears above other content */
+    
+    /* Additional background styling */
+    background: rgba(46, 47, 66, 0.4); /* Semi-transparent background */
+    width: 1440px;
+    height: 676px;
+}
+
+/* Style for the modal content */
+.modal-content {
+    padding: 20px;
+}
+
 /* END OF BANNER */
 
 /* Table 1 */
