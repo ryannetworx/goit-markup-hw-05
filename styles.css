@@ -1,0 +1,975 @@
+:root{
+    --primary-brand-color: #4D5AE5;
+    --pressed-state-color: #404BBF;
+    --primary-dark-overlays: #2E2F42;
+    --primary-success-color: #31D0AA;
+    --primary-light-mode-background: #F4F4FD;
+    --primary-accent-color: #E7E9FC;
+    --primary-body-color: #434455;
+
+}
+
+/* General Styles */
+
+.header-1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: 2%;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 2%;
+    color: var(--primary-dark-overlays)
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2%;
+    color: #2E2F42; 
+}
+
+.body-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2%;
+    line-height: 24px;
+    color: var(--primary-body-color)
+}
+
+.body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2%;
+    line-height: 24px;
+    color: var(--primary-body-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.team1,
+.customers,
+.footer {
+    width: 100%;
+}
+
+/* Link and Small typography not yet included */
+
+/* Navigation */
+
+.navigation-bar {
+    width: 100%;;
+    height: 72px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E7E9FC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: fixed; /* this helps with nav bar not move and overflow */
+    top: 0; /* this helps with nav bar not move and overflow */
+    left: 0; /* this helps with nav bar not move and overflow */
+    z-index: 100; /* Ensure it appears above other content */
+}
+
+.centered-logo {
+    display: flex;
+    align-items: center;
+    line-height: 72px;
+    margin-left: 3%;
+    padding-left: 100px;
+}
+
+.web {
+    font-family: "Raleway",sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    /* line-height: 21px; */
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--primary-brand-color);
+}
+.studio {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    /* line-height: 21px; */
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--primary-dark-overlays);
+}
+
+.header-body-medium {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.header-body-medium ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-body-medium li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header-body-medium a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.contact-info li {
+    text-decoration: none;
+}
+
+.header-nav-mail,
+.header-nav-phone {
+    text-decoration: none; /* Remove link decorations */
+    color: inherit; /* Inherit the text color from the parent */
+}
+
+.header-nav-mail {
+    margin-left: 5px;
+    padding-right: 50px;
+}
+
+.header-nav-phone {
+    margin-left: 5px;
+    padding-right: 100px;
+}
+
+/* END OF NAVIGATION BAR */
+
+/* Banner */
+.banner1 {
+    width: 100%;
+    height: 600px;
+    background-image: url(images/img/people-office.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tagline {
+    color: #FFFFFF;
+    width: 496px;
+    height: 120px;
+    top: 100px;
+    left: 472px;
+    text-align: center;
+    font-size: 56px;
+    margin: 5px auto 0 auto;
+    z-index: 1; /* Place above background color */
+
+}
+
+/* Styling for the button */
+.button-text {
+    width: 169px;
+    height: 56px;
+    /* padding: 16px 32px; */
+    border-radius: 4px;
+    background: var(--primary-brand-color);
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline on focus */
+    font-weight: bold; /* Optionally, make the font bold */
+    letter-spacing: 4%;
+    margin-top: 20px; /* Remove margin  for padding */
+    font-size: 16px; /* Remove border for border with underline */
+    z-index: 1; /* Place above background color */
+
+}
+
+.button-text:hover,
+.button-text:active {
+    background: var(--pressed-state-color);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .tagline {
+        font-size: 36px; /* Font size for smaller screens */
+        font-weight: 700; /* Font weight */
+        line-height: 40px; /* Line height */
+        letter-spacing: 0.02em; /* Letter spacing */
+        text-align: center; /* Text alignment */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .button-text {
+        max-width: 100%; /* Use full width for smaller screens */
+        margin-top: 100px; /* Adjust margin for better spacing */
+    }
+}
+
+/* END OF BANNER */
+
+/* Table 1 */
+
+.section-content-1 {
+    margin-top: 80px; /* away from the bottom of .banner1 */
+    margin-left: 50px; /* Add 50px margin from the left */
+    margin-right: 50px; /* Add 50px margin from the right */
+}
+
+.section-content-1 p {
+    min-height: 72px; /* Adjust the height as needed for at least 3 lines of text */
+}
+
+/* Remove list decorations */
+.section-content-1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Align table headings with h3 attributes */
+.section-content-1 table {
+    margin: 0 auto; /* Center the table horizontally */
+    max-width: 264px; /* Set a maximum width for the table */
+    border-collapse: collapse;
+}
+
+.section-content-1 th {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2%;
+    color: #2E2F42;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Align paragraphs with .body attributes */
+.section-content-1 td {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2%;
+    line-height: 24px;
+    color: var(--primary-body-color);
+    text-align: left;
+    padding: 10px;
+}
+
+.feature-box {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: #F4F4FD;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.feature-box img {
+    width: 64px;
+    height: 64px;
+}
+
+/* Responsive table - split into two columns on smaller screens */
+@media (max-width: 768px) {
+    .section-content-1 table {
+        display: block;
+    }
+
+    .section-content-1 td,
+    .section-content-1 th {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* END OF TABLE 1 */
+
+/* Section Services1 */
+.services1 {
+    margin-top: 80px;
+    margin-bottom: 80px; /* Add margin to create distance */
+    text-align: center;
+}
+
+.section-heading {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 2%;
+    color: var(--primary-dark-overlays);
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap;
+}
+
+.images {
+    width: 360px;
+    height: 300px;
+    border: 1px solid #E7E9FC;
+    background-color: #E7E9FC;
+    margin-top: 20px;
+    margin-right: 20px; /* Adds a small gap between images */
+}
+
+/* END OF SERVICES1 */
+
+/* Team1 Section */
+.team1 {
+    width: 100%;
+    min-height: 620px;
+    background: #F4F4FD;
+    margin-top: 40px;
+    position: relative;
+    padding-top: 80px;
+    text-align: center; /* Center text horizontally */
+}
+
+.team1 h2.section-heading {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 2%;
+    color: var(--primary-dark-overlays);
+    margin: 0; /* Reset margin to 0 */
+    padding: 20px 0; /* Add padding to separate from team-list */
+}
+
+.team1 .team-list-container {
+    display: flex;
+    flex-wrap: wrap; /* added for responsive layout */
+    justify-content: center; /* Center the list horizontally */
+}
+
+.team1 .team-list {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Make the list items flex containers */
+    flex-wrap: wrap; /* Allow the items to wrap to the next line */
+    justify-content: center; /* Center the list items horizontally */
+    
+}
+
+.team1 .team-member {
+    text-decoration: none;
+    width: 264px; /* Set width to 264px */
+    height: auto; /* Set height to 380px, will place socials here */
+    margin: 10px; /* Add margin between team members */
+    border-radius: 0px 0px 4px 4px; /* Set border-radius */
+    background: #FFFFFF;
+    box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+    padding: 0px 0px 32px 0px; /* Set padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribute content evenly vertically */
+}
+
+.team1 .team-member-content1 {
+    max-width: auto;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.team1 .team-member img {
+    width: 264px;
+    height: 260px;
+}
+
+.team1 .info-box {
+    width: 232px;
+    height: auto; /* Set height to auto to accommodate content */
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Allow the info-box to expand vertically */
+
+}
+
+.team1 h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2%;
+    color: #2E2F42;
+    text-align: center;
+}
+
+.team1 p.body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2%;
+    line-height: 24px;
+    color: var(--primary-body-color);
+    text-align: center;
+}
+
+.team1 .info-box h3,
+.team1 .info-box p {
+    margin: 0; /* Reset the margin to zero */
+    line-height: 1.1; /* Set the minimum line height to 1.1 (adjust as needed) */
+}
+
+
+/* Team Social Media Section */
+.team-social {
+    display: inline-block;
+    gap: 30px;
+    margin-top: 0;
+}
+
+.team-social-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-social-button {
+    width: 40px;
+    height: 40px;
+    scale: -0deg;
+    background: #4D5AE5;
+    border-radius: 50%;
+    border: none; /* Remove button border */
+    text-align: center;
+    margin: 7px;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Style for individual social media icons */
+.team-social-container li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.team-social-instagram,
+.team-social-linkedin {
+    max-width: 16px; /* Ensure the image doesn't exceed the button's width */
+    max-height: 16px; /* Ensure the image doesn't exceed the button's height */
+    align-content: center; /* Ensure the image  aligns with the button  content */
+}
+
+.team-social-twitter {
+    max-width: 16px;
+    max-height: 13px;
+    align-content: center;
+}
+
+.team-social-facebook {
+    max-width: 8px;
+    max-height: 16px;
+    align-content: center;
+}
+
+/* Change the color on hover */
+.team-social-button:hover {
+    background-color: #31D0AA;
+    cursor: pointer;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .team1 .team-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team1 .team-member {
+        width: 100%; /* Set width to 100% to make each member appear on a separate line */
+        margin: 20px 0; /* Add margin between team members on smaller screens */
+    }
+}
+
+/* END OF TEAM1 */
+
+
+
+/* Customers section */
+.customers {
+    width: 100%;
+    min-height: 150px;
+    background: #ffffff;
+    margin-top: 40px;
+    position: relative;
+    padding-top: 80px;
+    text-align: center; /* Center text horizontally */
+}
+
+.image-container-customers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Add gap between customer boxes */
+    margin-top: 20px; /* Add margin to separate from the heading */
+    flex-wrap: wrap; /* Allow customer boxes to wrap to the next line on smaller screens */
+
+}
+
+.customer-box {
+    min-width: 168px;
+    height: 88px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease; /* Add transition for color */
+
+}
+
+.customer-box img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Change the background color on hover */
+.customer-box:hover {
+    border-color: #404BBF; /* Change border color */
+}
+
+.customer-box:hover img {
+    filter: invert(62%) sepia(100%) saturate(10000%) hue-rotate(224deg) brightness(84%) contrast(76%);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .customers {
+        padding-top: 20px; /* Reduce top padding on smaller screens */
+    }
+    
+    .image-container-customers {
+        flex-wrap: wrap; /* Allow customer boxes to wrap to the next line */
+        justify-content: space-between; /* Add space between customer boxes */
+    }
+    
+    .customer-box {
+        width: calc(50% - 20px); /* Display two boxes per row with spacing in between */
+        max-width: 168px; /* Set the maximum width to 168px */
+        margin-bottom: 10px; /* Add margin between customer boxes */
+    }
+    
+    .customer-box img {
+        max-width: 100%; /* Reduce image size on smaller screens */
+
+    }
+}
+
+
+/* END of CUSTOMERS */
+
+
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background: #2E2F42;
+    padding: 40px 0;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align elements at the top */
+    flex-wrap: wrap;
+}
+
+.footer-list-container {
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    padding-left: 80px;
+    flex: 1;
+}
+
+#web-footer, #studio-footer {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4D5AE5;
+}
+
+#studio-footer {
+    color: #F4F4FD;
+}
+
+.footer-list-container p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #F4F4FD;
+}
+
+/* Footer Social Media Section */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: auto;
+    height: 40px;
+    margin-top: 50px; /* Add 50px distance from the top */
+    margin-left: 50px; /* Add 50px distance from the left */
+    justify-content: flex-start; /* Left-align the list items within the container */
+}
+
+.footer-social-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Left-align the ul */
+}
+
+.footer-social h4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 0px;
+    
+}
+
+.social-button {
+    width: 40px;
+    height: 40px;
+    scale: -0deg;
+    background: #4D5AE5;
+    border-radius: 50%; /* Makes the button circular */
+    border: none;
+    margin-right: 20px; /* Adds a 20px gap between each button */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for individual social media icons */
+.footer-social-container li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /* text-align: left; Align the social media icons to the left */
+}
+
+.footer-instagram {
+    width: 24px;
+    height: 24px;
+    align-content: center;
+}
+
+.footer-twitter {
+    width: 24px;
+    height: 19.5px;
+    align-items: center;
+}
+
+.footer-facebook {
+    width: 12px;
+    height: 24px;
+    align-content: center;
+}
+
+.footer-linkedin  {
+    width: 23px;
+    height: 23px;
+    align-content: center;
+}
+
+/* Change the color on hover */
+.social-button:hover {
+    background-color: #31D0AA;
+    cursor: pointer;
+}
+
+/* Left-align the elements */
+.footer-social h4,
+.footer-social-container li {
+    text-align: left;
+}
+
+/* Footer Logo and Social Media Sections */
+.footer-logo,
+.footer-social {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    padding: 50px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Center the headings on smaller screens */
+    .footer-social h4 {
+        text-align: center; /* Center-align the "Social Media" heading when screen is smaller */
+    }
+
+    .footer-social {
+        margin-top: 0;
+        margin-left: 0; /* Remove the top and left margin on smaller screens */
+        justify-content: center; /* Center the social media icons horizontally */
+    }
+    
+    .footer-social-container {
+        text-align: center; /* Center-align the ul on smaller screens */
+    }
+}
+
+
+
+/* Additional Styling for the footer as needed*/
+
+
+/* PORTFOLIO ******************************** */
+
+/* PORTFOLIO BUTTONS */
+
+/* Styling for the filter buttons container */
+.filter-btn {
+    margin-top: 170px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    justify-content: center;
+}
+
+/* Styling for the filter buttons */
+.filter-button {
+    width: auto;
+    height: 48px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust the spacing between buttons */
+    margin-bottom: 10px; /* Adjust the spacing between rows */
+
+
+}
+
+/* Inactive button style */
+.filter-button:not(.active) {
+    background: linear-gradient(0deg, #F4F4FD, #F4F4FD), linear-gradient(0deg, #E7E9FC, #E7E9FC);
+    border: 1px solid #E7E9FC;
+    color: #4D5AE5; /* Text color for inactive buttons */
+}
+
+/* Active button style (unchanged) */
+.filter-button.active {
+    width: 69px;
+    background: #404BBF;
+    box-shadow: 0px 2px 2px 0px #0000001F, 0px 2px 1px 0px #00000014, 0px 3px 1px 0px #0000001A;
+    color: #fff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .filter-btn {
+        justify-content: flex-start; /* Align buttons to the left on smaller screens */
+    }
+}
+
+/* End of Portfolio Buttons */
+
+/* PROJECT CARDS */
+
+/* Portfolio Cards Section */
+.portfolio-cards {
+    margin-top: 60px; /* 40px below .filter-btn */
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    justify-content: space-around; /* Horizontally center cards */
+}
+
+/* Remove list-style from all unordered lists within portfolio-cards */
+.portfolio-cards ul {
+    list-style: none;
+}
+
+/* Center the row-containers horizontally */
+.row-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow containers to wrap to the next line */
+    justify-content: center;
+    gap: 20px 10px; /* Add gap between card-containers */
+}
+
+/* Arrange the ul elements within row-containers from left to right */
+.row-container ul {
+    display: flex;
+    flex-direction: row; /* Arrange ul elements from left to right */
+    list-style: none; /* Remove list-style from ul elements */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+}
+
+/* Ensure that row-1, row-2, and row-3 are centered horizontally */
+.row-1,
+.row-2,
+.row-3 {
+    display: flex;
+    flex-wrap: wrap; /* Allow containers to wrap to the next line */
+    justify-content: center;
+    gap: 20px 10px; /* Add gap between card-containers */
+}
+
+/* Add margin-right to the project cards in row-1 */
+.row-1 li,
+.row-2 li,
+.row-3 li {
+    margin-right: 15px; /* Add 15px gap between project cards */
+}
+
+/* Change the flex direction for row-1, row-2, and row-3 */
+.row-1 ul,
+.row-2 ul,
+.row-3 ul {
+    flex-direction: row; /* Arrange ul elements from left to right */
+}
+
+/* Style the card-container with the specified dimensions and padding */
+.card-container {
+    width: 360px;
+    height: 420px;
+    /* background: linear-gradient(0deg, #E7E9FC, #E7E9FC), linear-gradient(0deg, #FFFFFF, #FFFFFF); */
+    /* border: 1px solid #E7E9FC; */
+    /* margin-bottom: 40px; Add margin between card-containers */
+}
+
+/* Styling for individual project cards */
+.project-card-1,
+.project-card-2,
+.project-card-3,
+.project-card-4,
+.project-card-5,
+.project-card-6,
+.project-card-7,
+.project-card-8,
+.project-card-9 {
+    max-width: 360px;
+    height: 420px;
+    top: 288px;
+    left: 156px;
+    padding: 0px 0px 32px 0px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #E7E9FC;
+    margin-bottom: 50px; /* Add margin between cards */
+}
+
+/* Styling for the project card information */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    top: 332px;
+    padding: 0px 16px 0px 16px;
+    /* gap: 0px; Adjust the desired line spacing (testing 6px) */
+
+}
+
+/* Adjust line spacing for individual elements within card-info */
+.card-info h3 {
+    margin-bottom: 10px; /* Adjust the margin as per your preference */
+    margin-top: 40px;
+}
+
+.card-info p {
+    margin-top: 0px; /* Adjust the margin as per your preference */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .project-card-1,
+    .project-card-2,
+    .project-card-3,
+    .project-card-4,
+    .project-card-5,
+    .project-card-6,
+    .project-card-7,
+    .project-card-8,
+    .project-card-9 {
+        width: 100%; /* Cards take full width on smaller screens */
+        margin-right: 0; /* Remove margin to stack cards vertically */
+    }
+}
+
+
