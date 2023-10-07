@@ -980,7 +980,7 @@ footer {
 .card-container::before {
     content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
     position: absolute;
-    top: 50%; /* Start from the middle */
+    top: 8%; /* Start from the middle */
     left: 0;
     max-width: 360px;
     height: 240px; /* Set a maximum height for the overlay box */
