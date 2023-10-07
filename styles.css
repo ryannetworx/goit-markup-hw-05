@@ -160,6 +160,27 @@ h3 {
     padding-right: 100px;
 }
 
+/* Active page link styles */
+.header-nav-studio:active,
+.header-nav-portfolio:active,
+.header-nav-contacts:active {
+    color: #404BBF; /* Font color when active */
+    position: relative;
+}
+
+.header-nav-studio:active::after,
+.header-nav-portfolio:active::after,
+.header-nav-contacts:active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Adjust this value for the desired underline thickness */
+    background-color: #404BBF; /* Underline color when active */
+    position: absolute;
+    bottom: -10px; /* Adjust this value to move the underline below the text */
+    left: 0;
+}
+
 /* END OF NAVIGATION BAR */
 
 /* Banner */
