@@ -980,15 +980,15 @@ footer {
 .card-container::before {
     content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
     position: absolute;
-    top: 100%; /* Start from the bottom */
+    top: 50%; /* Start from the middle */
     left: 0;
-    width: 100%;
-    height: 67%;
+    width: 360px;
+    height: 280px; /* Adjust the height to control where the effect starts */
     background-color: #4D5AE5;
     display: flex;
     justify-content: flex-start; /* Align text from the left */
     align-items: flex-start; /* Align text from the top */
-    padding: 10px 8px; /* Adjust padding for positioning */
+    padding: 40px 20px 20px; /* Adjust padding for positioning */
     text-align: left;
     font-family: Roboto, sans-serif;
     font-size: 16px;
